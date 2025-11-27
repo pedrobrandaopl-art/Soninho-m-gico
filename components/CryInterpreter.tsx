@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { interpretCry } from '../services/geminiService';
 import { CryInterpretationResponse, LoadingState } from '../types';
@@ -69,12 +70,12 @@ export const CryInterpreter: React.FC = () => {
                   <button
                     key={st.id}
                     onClick={() => handleSelect(st.label)}
-                    className="flex flex-col items-center justify-center gap-2 p-4 bg-night-900/60 hover:bg-pink-900/40 border border-white/10 hover:border-pink-400/50 rounded-2xl transition-all group"
+                    className="flex flex-col items-center justify-center gap-2 p-4 bg-indigo-500/20 hover:bg-pink-500/30 border border-indigo-400/30 hover:border-pink-400 rounded-2xl transition-all duration-300 group shadow-lg hover:shadow-pink-500/20 hover:-translate-y-1"
                   >
-                    <div className="text-indigo-300 group-hover:text-pink-300 transition-colors">
+                    <div className="text-indigo-200 group-hover:text-pink-100 transition-colors">
                       {st.icon}
                     </div>
-                    <span className="text-white font-medium text-sm text-center">{st.label}</span>
+                    <span className="text-white font-bold text-sm text-center">{st.label}</span>
                   </button>
                 ))}
               </div>
